@@ -3,33 +3,27 @@ import React from "react";
 import ReactDOM from "react-dom";
 import cars from "./practice";
 
-const hondaCar = [
-  cars[0],
-  cars[0].speedStats.topSpeed,
-  cars[0].coloursByPopularity[0]
-];
-const [honda, hondaTopSpeed, hondaTopColour] = hondaCar;
+// const hondaCar = [
+//   cars[0],
+//   cars[0].speedStats.topSpeed,
+//   cars[0].coloursByPopularity[0]
+// ];
+// const [honda, hondaTopSpeed, hondaTopColour] = hondaCar;
 
-const teslaCar = [
-  cars[1],
-  cars[1].speedStats.topSpeed,
-  cars[1].coloursByPopularity[0]
-];
-const [tesla, teslaTopSpeed, teslaTopColour] = teslaCar;
+// const teslaCar = [
+//   cars[1],
+//   cars[1].speedStats.topSpeed,
+//   cars[1].coloursByPopularity[0]
+// ];
+// const [tesla, teslaTopSpeed, teslaTopColour] = teslaCar;
 
+const [honda, tesla] = cars;
 
-// const allCars = [
-//   {
-//     cars[0],
-//     cars[0].speedStats.topSpeed,
-//     cars[0].coloursByPopularity[0]
-//   },
-//   {
-//     cars[1],
-//     cars[1].speedStats.topSpeed,
-//     cars[1].coloursByPopularity[0]
-//   }
-//  ];
+const {speedStats:{topSpeed: hondaTopSpeed}} = honda;
+const {speedStats:{topSpeed: teslaTopSpeed}} = tesla;
+
+const {coloursByPopularity: [hondaTopColour]} = honda;
+const {coloursByPopularity: [teslaTopColour]} = tesla;
 
 
 ReactDOM.render(
